@@ -1,3 +1,5 @@
+
+## Intro
 This warmup consists of three files.
 fr.py is the substitute I have done to replace Task 4.
 
@@ -13,5 +15,16 @@ This is the video feed result using OpenCV that places a rectangle around the fa
 
 This is the Terminal output that tells us where the face is on the screen with the x-midpoint of the face.
 
-References:
+
+
+## How to Use
+Move image into folder called 'people'. Name image as the name of the person in the photo.
+
+Then move into the directory with fr.py. Run command 
+```python3 fr.py```
+
+Script will generate encodings and use webcam to identify faces.
+
+
+## References:
 https://pypi.org/project/face-recognition/
