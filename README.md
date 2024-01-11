@@ -1,7 +1,7 @@
 This warmup consists of three files.
-fr.py is the substitue I have done to replace Task 4.
+fr.py is the substitute I have done to replace Task 4.
 
-fr.py is a script that uses the OpenCV and Face_recognition Python packages in order to do facial recognition and facial tracking. It also uses pyttsx3 in order to dictate the found person's face in a verbal manner using the computer's connected and/or built-in speaker.
+fr.py is a script that uses the OpenCV and Face_Recognition Python packages in order to do facial recognition and facial tracking. It also uses pyttsx3 in order to dictate the found person's face in a verbal manner using the computer's connected and/or built-in speaker.
 
 Below are some images indicating the uses and results of this script. 
 
@@ -12,3 +12,6 @@ This is the video feed result using OpenCV that places a rectangle around the fa
 <img width="682" alt="Screenshot 2024-01-11 at 3 17 59 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/a1e9bc22-68c1-4e23-b8db-11e090f1d437">
 
 This is the Terminal output that tells us where the face is on the screen with the x-midpoint of the face.
+
+References:
+https://pypi.org/project/face-recognition/
