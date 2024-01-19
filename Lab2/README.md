@@ -5,7 +5,7 @@
 Our team conssited of nick nhien, matthew fiorella and i. we created a ring of counter increments in the file ring.py.
 Attached is a screenshot of my terminal.
 
-
+<img width="455" alt="Screenshot 2024-01-18 at 3 28 36 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/1b5ad2a2-9c5a-4b29-abd3-661458b081d2">
 
 Using MQTT, we can create a multipoint communciation network. We can craete rings, broadcasts, etc. 
 
