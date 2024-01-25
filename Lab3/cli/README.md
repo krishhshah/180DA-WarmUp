@@ -3,6 +3,7 @@
 To begin the singleplayer rock paper scissors, move into the 'cli/ai' directory.
 
 Once in the 'cli/ai' directory, we can run the game using
+
 ```python3 ai.py```
 
 ## MQTT

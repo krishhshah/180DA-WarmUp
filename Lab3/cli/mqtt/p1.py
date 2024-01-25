@@ -2,7 +2,9 @@ import paho.mqtt.client as mqtt
 import numpy as np
 import time
 
-counter = 0
+p1_win = 0
+p2_win = 0
+tie = 0
 
 # 0. define callbacks - functions that run when events happen.
 # The callback for when the client receives a CONNACK response from the server.
@@ -24,6 +26,9 @@ def on_disconnect(client, userdata, rc):
 # (you can create separate callbacks per subscribed topic)
 def on_message(client, userdata, message):
     message.payload = message.payload.decode("utf-8")
+    global p1_win
+    global p2_win
+    global tie
     # print('Received message: "'+ str(message.payload) + '" on topic "' +
     #     message.topic + '" with QoS ' + str(message.qos))
     if str(message.payload) == '0':
@@ -38,11 +43,15 @@ def on_message(client, userdata, message):
             p2 = 'scissors'
 
         if str(message.payload)[0] == '1':
+            p1_win += 1
             print('You win! Player 2 chose', p2)
         elif str(message.payload)[0] == '2':
+            p2_win += 1
             print('You lose! Player 2 chose', p2)
         elif str(message.payload)[0] == '3':
+            tie += 1
             print('It was a tie! You both chose', p2)
+        print("P1 ", p1_win, "  P2 ", p2_win, "  Tie ", tie)
 
 
         inp = 0
