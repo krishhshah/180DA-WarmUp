@@ -6,6 +6,10 @@ Once in the 'cli/ai' directory, we can run the game using
 
 ```python3 ai.py```
 
+### Example run and screenshot
+
+Here is a screenshot:
+
 ## MQTT
 To begin the multiplayer rock paper scissors, move into the 'cli/mqtt' directory.
 
@@ -18,3 +22,7 @@ Once in the 'cli/mqtt' directory, begin the multiplayer session by running the s
 ```python3 server.py```
 
 To exit the game, press ctrl-c on all three scripts.
+
+### Example run and screenshot
+
+Here is a Screenshot:
