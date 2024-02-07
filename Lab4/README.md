@@ -1,15 +1,19 @@
 ## Task 1
 
 Here is a picture of the MCU working.
+![IMG_5516](https://github.com/krishhshah/180DA-WarmUp/assets/95327144/ee6bd8e8-c613-435e-8ce9-dbc3c765e619)
+
 
 Here are the IMU printouts.
+<img width="1232" alt="Screenshot 2024-02-01 at 2 45 56 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/2a2199df-182b-4025-8c09-8f089db08efb">
 
 
 The script for the Arudino is under '/IMU'
 
 ## Task 2
 
-Here is the MCU connceting to WIFI.
+Here is the MCU connecting to WIFI.
+<img width="1232" alt="Screenshot 2024-02-01 at 3 21 53 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/136de57d-9118-4469-bee4-809cf98e7fd0">
 
 
 The script is under '/WIFI'
@@ -17,6 +21,7 @@ The script is under '/WIFI'
 ## Task 3
 
 Here is the screenshot of the mqtt communciation between my Arduino and Computer.
+<img width="983" alt="Screenshot 2024-02-01 at 3 52 33 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/d883c392-fe05-4f48-9bb4-f3d3d9ace091">
 
 
 When the delay for sending messages was 8000 milliseconds, the lag was under .2 seconds.
