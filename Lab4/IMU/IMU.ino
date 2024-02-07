@@ -2,7 +2,6 @@
 // I added the gyroscope code on top of this existing code by looking at the SimpleGyroscope code.
 
 
-
 #include <Arduino_LSM6DS3.h>
 
 void setup() {
@@ -55,4 +54,6 @@ void loop() {
     Serial.print('\t');
     Serial.println(gz);
   }
+
+  delay(500);
 }

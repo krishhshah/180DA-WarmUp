@@ -1,17 +1,15 @@
 // This script was built upon the tutorial found at https://docs.arduino.cc/tutorials/uno-wifi-rev2/uno-wifi-r2-mqtt-device-to-device/. 
 // I added IMU code on top of this existing code by using the code from Task 1.
 
-// When the delay for sending messages was 8000 milliseconds, the lag was under .2 seconds.
-// When the delay for sending messages was 1000 milliseconds, the lag was around .35 seconds
-// When our frequency is higher, the lag gets a little longer.
-// We can combat this by keeping frequency low and also by doing all necessary algorithms before the message is sent so that the subscriber just has to receive the message and do nothing else to add to lag time.
-
 
 #include <ArduinoMqttClient.h>
 #include <WiFiNINA.h>
 #include "arduino_secrets.h"
 #include <Arduino_LSM6DS3.h>
+#include <ArduinoJson.h>
 
+
+JsonDocument dict;
 
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID;        // your network SSID (name)
@@ -20,12 +18,12 @@ char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as k
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
-const char broker[] = "mqtt.eclipseprojects.io";
+const char broker[] = "broker.hivemq.com";
 int        port     = 1883;
 const char topic[]  = "ece180d/ks";
 
 //set interval for sending messages (milliseconds)
-const long interval = 1000;
+const long interval = 250;
 unsigned long previousMillis = 0;
 
 int count = 0;
@@ -125,19 +123,14 @@ void loop() {
 
     // send message, the Print interface can be used to set the message contents
     mqttClient.beginMessage(topic);
-    mqttClient.print("Acceleration:  ");
-    mqttClient.print(ax);
-    mqttClient.print(" ");
-    mqttClient.print(ay);
-    mqttClient.print(" ");
-    mqttClient.print(az);
-    mqttClient.print('\t');
-    mqttClient.print("Gyroscope:  ");
-    mqttClient.print(gx);
-    mqttClient.print(" ");
-    mqttClient.print(gy);
-    mqttClient.print(" ");
-    mqttClient.print(gz);
+    dict["ax"] = ax;
+    dict["ay"] = ay;
+    dict["az"] = az;
+    dict["gx"] = gx;
+    dict["gy"] = gy;
+    dict["gz"] = gz;
+
+    serializeJson(dict, mqttClient);
     mqttClient.endMessage();
 
     Serial.println();

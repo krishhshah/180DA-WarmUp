@@ -42,7 +42,7 @@ client.on_message = on_message
 
 # 2. connect to a broker using one of the connect*() functions.
 # client.connect_async("test.mosquitto.org")
-client.connect_async('mqtt.eclipseprojects.io')
+client.connect_async('broker.hivemq.com')
 # client.connect("test.mosquitto.org", 1883, 60)
 # client.connect("mqtt.eclipse.org")
 
