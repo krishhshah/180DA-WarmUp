@@ -5,10 +5,14 @@ Here is a picture of the MCU working.
 Here are the IMU printouts.
 
 
+The script for the Arudino is under '/IMU'
+
 ## Task 2
 
 Here is the MCU connceting to WIFI.
 
+
+The script is under '/WIFI'
 
 ## Task 3
 
@@ -20,7 +24,12 @@ When the delay for sending messages was 1000 milliseconds, the lag was around .3
 When our frequency is higher, the lag gets a little longer.
 We can combat this by keeping frequency low and also by doing all necessary algorithms before the message is sent so that the subscriber just has to receive the message and do nothing else to add to lag time.
 
+The scripts are under '/MQTT'
+
 ## Task 4
+
+The script is under '/Classification'
+
 
 1) Yes, I can see the gravity acceleration while idle. Using the IMU I have figured out the +x,+y,+z values.
 
@@ -54,6 +63,3 @@ My classifer works alright. It always picks up the movements, but sometimes caus
 
 I was able to use the same features as before but in a compeltely different way.
 I was able to easily track a circular rotation as long as it was d=one during the time frame of 5 seconds. I used the AZ and AY features.
-
-
-
