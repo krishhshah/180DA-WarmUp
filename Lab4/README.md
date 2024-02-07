@@ -41,6 +41,7 @@ The script is under '/Classification'
 2) It looks as if the gyroscope values drift even when idle, either this is due to the senstiitvity of them or just simply the noise from the instrument itself. The acceleration values seem to be constant when it is idle. We can distinguish between idle and nonidle in a few ways. One is to take the average acceleration over a certain time and see how low it is. Another one would be to see if theres a difference in the current and previous values higher than an amount greater than the drift. ANother way is the one I will be using, it using instantaneous values ax, ay, and az and uses the following equation to see whether it is idle: ax^2 + ay^2 + az^2 = a^2. If a is between .97-1.03 (accounting for noise), we can say it is idle.
 
 Here is the Confusion Matrix:
+<img width="448" alt="Screenshot 2024-02-01 at 4 43 33 PM" src="https://github.com/krishhshah/180DA-WarmUp/assets/95327144/4b1f9f02-96f0-4c2a-88a0-2a6632397f0d">
 
 
 3) When the Arduino is stationary the following values are usually displayed
